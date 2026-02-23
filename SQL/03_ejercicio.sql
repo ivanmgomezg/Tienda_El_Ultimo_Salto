@@ -1,5 +1,7 @@
 -- Ejercicio 03: ¿Cuál es el paracaídas más caro que tenemos?
 
-SELECT id_producto, nombre, MAX(precio) as "precio"
-from productos
+SELECT nombre, precio
+FROM productos
 WHERE categoria = 'Paracaídas'
+ORDER BY precio DESC
+LIMIT 1;
