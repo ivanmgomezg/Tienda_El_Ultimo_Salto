@@ -3,8 +3,9 @@
 SELECT 
 	productos.id_producto,
     productos.nombre,
-    SUM(detalle_ventas.cantidad) as 'Total_Ventas'
+    SUM(detalle_ventas.cantidad) as 'Total_Unidades'
 from detalle_ventas
 JOIN productos on detalle_ventas.id_producto = productos.id_producto
 GROUP BY productos.id_producto
 order by Total_Ventas DESC
+LIMIT 1

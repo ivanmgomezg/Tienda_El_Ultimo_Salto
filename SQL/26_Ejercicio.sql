@@ -3,9 +3,10 @@
 
 WITH resumen_clientes AS (
   SELECT -- creo una tabla que muestra los clientes con las categorias que compro
-      clientes.nombre,
-      COUNT(DISTINCT productos.categoria) AS num_categorias, --para saber si tiene 1 o 2 categorias 
-      MAX(productos.categoria) AS unica_categoria -- para saber la categoria mayor dentro de sus compras "Paracaídas es la mayor"
+    clientes.nombre,
+    COUNT(DISTINCT productos.categoria) AS num_categorias, --para saber si tiene 1 o 2 categorias 
+    MAX(productos.categoria) AS unica_categoria, -- para saber la categoria mayor dentro de sus compras "Paracaídas es la mayor"
+	  SUM(detalle_ventas.cantidad * detalle_ventas.precio_unitario) AS "Total_Gastado"
   FROM detalle_ventas
   JOIN ventas ON detalle_ventas.id_venta = ventas.id_venta
   JOIN productos ON detalle_ventas.id_producto = productos.id_producto
