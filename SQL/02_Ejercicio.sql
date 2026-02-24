@@ -1,4 +1,7 @@
--- Ejercicio 02: Enlista todos los productos de la categoría "Paracaídas" con sus precios, ordenados de mayor a menor precio.
+--========================================================================
+--Ejercicio 2: Enlista todos los productos de la categoría "Paracaídas" 
+--con sus precios, ordenados de mayor a menor precio
+--========================================================================
 
 SELECT 
 	id_producto,

@@ -1,12 +1,15 @@
---Ejercicio 17 ¿Cuánto dinero hemos dejado de ingresar por el cupón "ULTIMO_SUSPIRO"? (Calcula la 
---diferencia entre lo que hubiera sido sin descuento y lo que fue con descuento).
+--========================================================================
+--Ejercicio 17: ¿Cuánto dinero hemos dejado de ingresar por el cupón 
+--"ULTIMO_SUSPIRO"? (Calcula la diferencia entre lo que hubiera sido sin 
+--descuento y lo que fue con descuento).
+--========================================================================
 
-WITH ventas_cupon AS( --Tabla temporal ventas_cupon
+WITH ventas_cupon AS( --Se crea un CTE(ventas_cupon) del precio con descuento y el precio original "sin descuento"
   SELECT 
       total_venta AS precio_con_descuento, --Suma de total venta con descuento 30% 'ULTIMO_SUSPIRO'
       total_venta / 0.70 AS precio_original -- Precio original de las ventas con bono 'ULTIMO_SUSPIRO'
   FROM ventas
   WHERE cupon_usado = 'ULTIMO_SUSPIRO'
 )
-SELECT SUM(precio_original - precio_con_descuento) AS "Dinero que dejo de ingresar" --Diferencia 
+SELECT SUM(precio_original - precio_con_descuento) AS "Dinero que dejo de ingresar" --Diferencia entre precio original - precio con descuento
 FROM ventas_cupon;

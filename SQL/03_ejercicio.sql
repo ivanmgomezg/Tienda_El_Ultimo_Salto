@@ -1,4 +1,6 @@
--- Ejercicio 03: ¿Cuál es el paracaídas más caro que tenemos?
+--========================================================================
+--Ejercicio 3 ¿Cuál es el paracaídas más caro que tenemos?
+--========================================================================
 
 SELECT nombre, precio
 FROM productos

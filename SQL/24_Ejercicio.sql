@@ -1,5 +1,8 @@
---Ejercicio 24: Para cada mes en 2025, calcula: total de ventas, número de transacciones, y ticket promedio.
- 
+--========================================================================
+--Ejercicio 24 Para cada mes en 2025, calcula: total de ventas, número de 
+--transacciones, y ticket promedio
+--======================================================================== 
+
 SELECT 
     strftime('%m', fecha_venta) AS Mes,
     SUM(total_venta) AS Total_Ventas,

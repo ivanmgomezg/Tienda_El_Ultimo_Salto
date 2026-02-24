@@ -1,19 +1,26 @@
---Ejercicio 26: Identifica clientes que compraron SOLO paracaídas (nunca compraron
---accesorios). Muestra nombre y total gastado
+--========================================================================
+--Ejercicio 26 Identifica clientes que compraron SOLO paracaídas 
+--(nunca compraron accesorios). Muestra nombre y total gastado.
+--========================================================================
 
+-- CTE: Creo una tabla temporal con resumen de categorías por cliente
 WITH resumen_clientes AS (
-  SELECT -- creo una tabla que muestra los clientes con las categorias que compro
+  SELECT 
     clientes.nombre,
-    COUNT(DISTINCT productos.categoria) AS num_categorias, --para saber si tiene 1 o 2 categorias 
-    MAX(productos.categoria) AS unica_categoria, -- para saber la categoria mayor dentro de sus compras "Paracaídas es la mayor"
-	  SUM(detalle_ventas.cantidad * detalle_ventas.precio_unitario) AS "Total_Gastado"
+    COUNT(DISTINCT productos.categoria) AS num_categorias, -- Cuenta categorías distintas (1 o más)
+    MAX(productos.categoria) AS unica_categoria, -- Si solo hay 1 categoría, MAX devuelve esa ("Paracaídas" es mayor alfabéticamente)
+    SUM(detalle_ventas.cantidad * detalle_ventas.precio_unitario) AS "Total_Gastado" -- Calculo ingresos totales del cliente
   FROM detalle_ventas
   JOIN ventas ON detalle_ventas.id_venta = ventas.id_venta
   JOIN productos ON detalle_ventas.id_producto = productos.id_producto
   JOIN clientes ON ventas.id_cliente = clientes.id_cliente
   GROUP BY clientes.nombre
 )
-SELECT *
-FROM resumen_clientes --de la tabla creada busco los que tenga una sola categoria y que su categoria maxima sea "Paracaídas"
-WHERE num_categorias = 1 
-  AND unica_categoria = 'Paracaídas';
+
+-- Filtro: Solo clientes con 1 categoría y que sea "Paracaídas"
+SELECT 
+  nombre,
+  Total_Gastado
+FROM resumen_clientes
+WHERE num_categorias = 1  -- Solo compraron de 1 categoría
+  AND unica_categoria = 'Paracaídas'; -- Esa categoría es "Paracaídas"
