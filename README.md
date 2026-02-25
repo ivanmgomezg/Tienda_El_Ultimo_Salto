@@ -70,9 +70,9 @@ El grupo **60-69 años** presenta el menor rendimiento con solo **$481,780 (9% d
 
 **Recomendaciones:**
 
-**30-39 años:** Priorizar campañas de marketing digital y productos premium (máximo ROI).
+**30-39 años:** Priorizar campañas de marketing digital y productos premium.
 
-**70+ años:** Implementar programa de fidelización y mantener estrategia de cupones (alta frecuencia comprobada).
+**70+ años:** Implementar programa de fidelización y mantener estrategia de cupones.
 
 **60-69 años:** Investigar barreras de compra y evaluar si el portafolio satisface sus necesidades.
 
@@ -102,13 +102,13 @@ Las ventas se distribuyen equilibradamente con un **promedio de 8% por mes**. **
 
 **Hallazgos Principales:**
 
-Los rangos **40-49 años** y **mayores de 70 años** concentran el mayor riesgo con **20% cada uno** de clientes inactivos. Paradójicamente, el grupo **70+**, siendo uno de los más rentables, presenta alta tasa de abandono, sugiriendo que el paracaidismo puede ser una **actividad puntual** y no recurrente.
+Los rangos **40-49 años** y **mayores de 70 años** concentran el mayor riesgo con **20% cada uno** de clientes inactivos. Curiosamente, el grupo **70+**, siendo uno de los más rentables, presenta alta tasa de abandono, sugiriendo que el paracaidismo puede ser una **actividad puntual** y no recurrente.
 
 **El 34% de clientes sin compras en 180 días** representa un nivel crítico que requiere acción inmediata.
 
 **Recomendaciones:**
 
-**70+ años:** Contacto personalizado con 25% descuento. Investigar si la naturaleza del producto limita la recurrencia.
+**70+ años:** Contacto personalizado con descuento. Investigar si la naturaleza del producto limita la recurrencia.
 
 **40-49 años:** Email con ofertas de temporada alta y 15% descuento.
 
